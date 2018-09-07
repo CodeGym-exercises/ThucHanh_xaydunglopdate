@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let MyDate = function(d,m,y){
+			this.day = d;
+			this.month = m;
+			this.year = y;
+			this.getDay = function(){
+				return this.day;
+			}
+			this.getMonth = function(){
+				return this.month;
+			}
+			this.getYear = function(){
+				return this.year;
+			}
+			this.setDay = function(d){
+				this.day = d;
+			}
+			this.setMonth = function(m){
+				this.month = m;
+			}
+			this.setYear = function(y){
+				this.year = y;
+			}
+			this.setDate = function(d,m,y){
+				this.day = d;
+				this.month = m;
+				this.year = y;
+			}
+			this.toString = function(){
+				console.log("to day is "+ this.getDay()+
+					"/"+this.getMonth()+
+					"/"+this.getYear());
+			}
+		};
+
+		let today = new MyDate(7,8,2018);
+		today.toString();
+	</script>
+</body>
+</html>
